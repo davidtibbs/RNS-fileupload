@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "02d5e95c-10ce-4b4a-8e04-24f6fde0df0b",
+		"name": "API Documentation for File Upload and Encryption",
+		"description": "Django route that takes a file upload, creates a new key, encrypts the file and stores in S3 (or file system)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36411364"
+	},
+	"item": [
+		{
+			"name": "/fileupload/upload/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/admin/Downloads/hello.txt"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/fileupload/upload/",
+				"description": "Accepts a file upload, generates an encryption key, encrypts the file, and stores it in either AWS S3 or the local file system."
+			},
+			"response": []
+		}
+	]
+}
